@@ -180,10 +180,3 @@ class AYA:
         german, persian = self._postprocess(gen_text)
 
         return german, persian
-
-if __name__ == "__main__":
-    aya = AYA()
-    # aya.finetune()
-    german, persian = aya.infer("Hi I want to become a movie star")
-
-    print(german, persian)
