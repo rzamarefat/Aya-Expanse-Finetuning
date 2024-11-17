@@ -72,7 +72,7 @@ class AYA:
         with open(default_data_path, "r", encoding='utf-8') as f:
             content = [l.strip() for l in f.readlines()]
 
-        
+
         for c in content:
             en = c.split("|||")[0]
             ge = c.split("|||")[1]
@@ -161,7 +161,10 @@ class AYA:
 
 
     def infer(self, content):
-        self._model.load_adapter(r"C:\Users\ASUS\Desktop\github_projects\Aya-Expanse-Translation\Aya-Expanse-Finetuning\trans_ge_to_ge_pe")
+        try:
+            self._model.load_adapter(r"C:\Users\ASUS\Desktop\github_projects\Aya-Expanse-Translation\Aya-Expanse-Finetuning\trans_ge_to_ge_pe")
+        except:
+            pass
 
         prompts = [{"role": "user", "content": f'Translate "{content}" to German and Persian'}]
 
