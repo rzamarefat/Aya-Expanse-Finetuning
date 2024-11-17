@@ -11,7 +11,7 @@ An implementation of fine-tuning AYA-Expanse model on English to German and Pers
 ```
 pip install -r requirements.txt
 ```
-- For finetuning run the following:
+- For finetuning run the following. It will download the dataset automatically.
 ```
 python run_finetuning.py
 ```
